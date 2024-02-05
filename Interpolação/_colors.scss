@@ -1,0 +1,12 @@
+$colors:(
+    "primary": pink
+);
+
+@function bg-colors($hey) {
+
+      @if not map-has-key($colors ,$key){
+          @warn "Esse valor passado #{key} não existe!"
+      }
+
+    @return map-get($colors, $key );
+}
